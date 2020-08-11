@@ -88,3 +88,7 @@ export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${re
 
 ![4](./screenshots/4.png)
 
+
+## Credits : 
+
+_Clever Programmer Youtube Channel_ [Channel](https://www.youtube.com/channel/UCqrILQNl5Ed9Dz6CGMyvMTQ)
