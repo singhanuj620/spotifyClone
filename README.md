@@ -1,68 +1,90 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Spotify Clone 
 
-## Available Scripts
+This is a Spotify reactJS web clone, which has an original Spotify login authentication. And fetches the user detail, playlist name, and Bollywood weekly playlist full details like songs name, artist name, cover image.
 
-In the project directory, you can run:
+## Features : 
 
-### `npm start`
+1. Spotify Authentic Login System
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+2. Spotify API for fetching data
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+:collision: :collision: :collision: :collision: :collision: :collision: :collision: :collision: :collision:
 
-### `npm test`
+## What Have I Learnt ?
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. Material UI
 
-### `npm run build`
+2. Spotify API working
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+3. CSS (There is always something new in this :laughing: )
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+4. Revised Context API concept of ReactJS
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+:collision: :collision: :collision: :collision: :collision: :collision: :collision: :collision: :collision:
 
-### `npm run eject`
+## Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+1. Installed NodeJS [Official Website](https://nodejs.org/en/)
+2. Knowledge of ReactJS [Official Website](https://reactjs.org/)
+3. Knowledge of MaterialUI [Official Website](https://material-ui.com/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+:collision: :collision: :collision: :collision: :collision: :collision: :collision: :collision: :collision:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## How to Run ?
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+1. Clone this github repo </br> ```git clone https://github.com/singhanuj620/spotifyClone.git ```
+2. Install all the dependencies </br> ```npm install```
+3. Make a file name **spotify.js** inside **/src**
+4. Content of file will be : </br> 
+```export const authEndpoint = 
+"https://accounts.spotify.com/authorize";
 
-## Learn More
+const redirectUri = "http://localhost:3000/"
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+const clientId = <YOUR CLIENT ID>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+const scopes = [
+    "user-read-currently-playing",
+    "user-read-recently-played",
+    "user-read-playback-state",
+    "user-top-read",
+    "user-modify-playback-state",
+    "user-read-email"
+]
 
-### Code Splitting
+export const getTokenFromResponse = () => {
+    return window.location.hash
+    .substring(1)
+    .split('&')
+    .reduce( (initial, item) => {
+        let parts = item.split('=');
+        initial[parts[0]] = decodeURIComponent(parts[1])
+        return initial
+    }, {});
+}
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`; 
+```
+4. Get your own spotify **client id** [From Here](https://developer.spotify.com/) and paste in the **spotify.js** file. _Line 6 approx_
+5. In terminal run the application </br> ```npm start```
 
-### Analyzing the Bundle Size
+:collision: :collision: :collision: :collision: :collision: :collision: :collision: :collision: :collision:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+:heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: 
 
-### Making a Progressive Web App
+## MY PERSONAL PORTFOLIO (Click Here)[https://anujportfolio.herokuapp.com]
+## INSTAGRAM ACCOUNT (Click Here)[https://instagram.com/anujcodeop]
+## LINKEDIN ACCOUNT (Click Here)[https://www.linkedin.com/in/anuj-singh-007/]
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+:heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: 
 
-### Advanced Configuration
+## ScreenShots : 
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+![1](./screenshots/1.png)
 
-### Deployment
+![2](./screenshots/2.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+![3](./screenshots/3.png)
 
-### `npm run build` fails to minify
+![4](./screenshots/4.png)
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
