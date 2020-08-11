@@ -72,9 +72,9 @@ export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${re
 
 :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: 
 
-## MY PERSONAL PORTFOLIO (Click Here)[https://anujportfolio.herokuapp.com]
-## INSTAGRAM ACCOUNT (Click Here)[https://instagram.com/anujcodeop]
-## LINKEDIN ACCOUNT (Click Here)[https://www.linkedin.com/in/anuj-singh-007/]
+## MY PERSONAL PORTFOLIO [Click Here](https://anujportfolio.herokuapp.com)
+## INSTAGRAM ACCOUNT [Click Here](https://instagram.com/anujcodeop)
+## LINKEDIN ACCOUNT [Click Here](https://www.linkedin.com/in/anuj-singh-007/)
 
 :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: :heart: 
 
