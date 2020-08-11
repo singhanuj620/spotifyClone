@@ -1,0 +1,29 @@
+.login{
+    background-color: #DAE0E2;
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.login > img {
+    height: 15rem;
+}
+
+.login > h1 {
+    font-family: Helvetica, sans-serif;
+    font-size: 5rem;
+    letter-spacing: 3px;
+    font-weight: 200;
+    margin-top: -9rem;
+}
+
+.login > a {
+    background-color: #50D850;
+    text-decoration: none;
+    color: inherit;
+    padding: 20px;
+    border-radius: 99px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
